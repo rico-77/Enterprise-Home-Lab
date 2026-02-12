@@ -39,10 +39,15 @@ You can download the ISO Files Using the Links:
 💡 For the Microsoft ISOs, you will have to enter in contact details, you can add dummy information.
 
 Windows Server 2025: https://info.microsoft.com/ww-landing-evaluate-windows-server-2025.html?lcid=en-us&culture=en-us&country=us
+
 Windows 11 Enterprise: https://info.microsoft.com/ww-landing-windows-11-enterprise.html
+
 Ubuntu Desktop 22.04: https://releases.ubuntu.com/jammy/
+
 Ubuntu Server 22.04: https://releases.ubuntu.com/jammy/
+
 Security Onion: https://securityonionsolutions.com/software
+
 Kali Linux 2024.4: https://www.kali.org/get-kali/#kali-installer-images
 
 
