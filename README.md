@@ -60,7 +60,8 @@ Kali Linux 2024.4: https://www.kali.org/get-kali/#kali-installer-images
 
 🛠**Tools**
 
-Enterprise Tools + Defense
+**Enterprise Tools + Defense**
+
 🖥**Microsoft Active Director**y: A directory service used for managing and organizing network resources, users, and permissions in a Windows environment.
 
 🛡 **Wazuh**: An open-source security monitoring platform that provides intrusion detection, log analysis, vulnerability detection, and compliance reporting.
@@ -68,7 +69,8 @@ Enterprise Tools + Defense
 📧**MailHog**: MailHog is a lightweight email testing tool that acts as a fake SMTP server. It captures all outgoing emails sent by applications, without delivering them to real inboxes. You can inspect emails via a web interface or API.
 
 
-Offense
+**Offense**
+
 
 💀**Evil-WinRM**: A powerful Ruby-based Windows Remote Management (WinRM) client used by penetration testers to connect to and interact with Windows systems, often for post exploitation tasks such as command execution and data extraction.
 
