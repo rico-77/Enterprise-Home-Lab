@@ -38,7 +38,7 @@ Virtual Machines Deployed:
 
 
 
-⬇️ Instalation of VM's
+⬇️ **Instalation of VM's**
 
 Download the ISO files directly from the provider. Depending on when you take this program, there could be changes to the UI. The fundamentals will stay the same.
 You can download the ISO Files Using the Links:
@@ -57,4 +57,23 @@ Security Onion: https://securityonionsolutions.com/software
 Kali Linux 2024.4: https://www.kali.org/get-kali/#kali-installer-images
 
 
+
+🛠**Tools**
+Enterprise Tools + Defense
+🖥**Microsoft Active Director**y: A directory service used for managing and organizing network resources, users, and permissions in a Windows environment.
+
+🛡 **Wazuh**: An open-source security monitoring platform that provides intrusion detection, log analysis, vulnerability detection, and compliance reporting.
+
+📧**MailHog**: MailHog is a lightweight email testing tool that acts as a fake SMTP server. It captures all outgoing emails sent by applications, without delivering them to real inboxes. You can inspect emails via a web interface or API.
+
+Offense
+Evil-WinRM: A powerful Ruby-based Windows Remote Management (WinRM) client used by penetration testers to connect to and interact with Windows systems, often for post exploitation tasks such as command execution and data extraction.
+
+Hydra: A fast and flexible password-cracking tool designed to perform brute-force and dictionary-based attacks on various network protocols, including SSH, HTTP, FTP, and more.
+
+SecLists: A comprehensive collection of penetration testing resources, including wordlists for usernames, passwords, web directories, and other payloads used in reconnaissance and exploitation phases.
+
+NetExec: A network exploitation tool that enables remote command execution on target machines through various protocols, assisting in lateral movement and privilege escalation scenarios.
+
+XFreeRDP: An open-source implementation of the Remote Desktop Protocol (RDP), enabling penetration testers to connect to and control Windows systems remotely for reconnaissance and post-exploitation purposes.
 
