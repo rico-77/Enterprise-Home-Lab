@@ -33,7 +33,10 @@ Virtual Machines Deployed:
 
  - Minimum 18G DDR5 to run all machines.
 
+
+
 ⬇️ Instalation of VM's
+
 Download the ISO files directly from the provider. Depending on when you take this program, there could be changes to the UI. The fundamentals will stay the same.
 You can download the ISO Files Using the Links:
 💡 For the Microsoft ISOs, you will have to enter in contact details, you can add dummy information.
