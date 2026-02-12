@@ -1,2 +1,5 @@
 # Enterprise-Home-Lab
-This project was completed by following a structured cybersecurity course /  The lab was fully built, configured, and validated independently, with additional customization, documentation.
+The lab was fully built, configured, and validated independently, with
+additional customization, documentation, and analysis added to demonstrate
+practical understanding of enterprise security architecture, attack paths,
+and defensive controls.
