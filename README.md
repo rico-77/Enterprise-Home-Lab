@@ -19,7 +19,7 @@ and defensive controls.
 
      ( Safe behind NAT )
 
-
+---
 
 🖥️ VM Setup
 Virtual Machines Deployed:
@@ -36,7 +36,7 @@ Virtual Machines Deployed:
  - Minimum 18G DDR5 to run all machines.
 
 
-
+---
 
 ⬇️ **Instalation of VM's**
 
@@ -56,7 +56,7 @@ Security Onion: https://securityonionsolutions.com/software
 
 Kali Linux 2024.4: https://www.kali.org/get-kali/#kali-installer-images
 
-
+---
 
 🛠**Tools**
 
