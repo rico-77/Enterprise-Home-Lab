@@ -15,4 +15,5 @@ VirtualBox: NAT Network
  - IP Address Range: 10.0.0.0/24
  - Usable Range: 10.0.0.1 – 10.0.0.254
  - DHCP Dynamic Scope: 10.0.0.100 – 10.0.0.200
+
         ( Safe behind NAT )
