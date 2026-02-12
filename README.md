@@ -71,13 +71,13 @@ Kali Linux 2024.4: https://www.kali.org/get-kali/#kali-installer-images
 
 **Offense**
 
-💀**Evil-WinRM**: A powerful Ruby-based Windows Remote Management (WinRM) client used by penetration testers to connect to and interact with Windows systems, often for post exploitation tasks such as command execution and data extraction.
+💀**Evil-WinRM**: A powerful Ruby-based Windows Remote Management (WinRM) client used by penetration testers to connect to and interact with Windows systems, often for post exploitation tasks such as command execution and data extraction. ( Kali Linux / project-x-attacker )
 
-🔑 **Hydra**: A fast and flexible password-cracking tool designed to perform brute-force and dictionary-based attacks on various network protocols, including SSH, HTTP, FTP, and more.
+🔑 **Hydra**: A fast and flexible password-cracking tool designed to perform brute-force and dictionary-based attacks on various network protocols, including SSH, HTTP, FTP, and more. ( Kali Linux / project-x-attacker )
 
-📜 **SecLists**: A comprehensive collection of penetration testing resources, including wordlists for usernames, passwords, web directories, and other payloads used in reconnaissance and exploitation phases.
+📜 **SecLists**: A comprehensive collection of penetration testing resources, including wordlists for usernames, passwords, web directories, and other payloads used in reconnaissance and exploitation phases. ( Kali Linux / project-x-attacker )
 
-🌐 **NetExec**: A network exploitation tool that enables remote command execution on target machines through various protocols, assisting in lateral movement and privilege escalation scenarios.
+🌐 **NetExec**: A network exploitation tool that enables remote command execution on target machines through various protocols, assisting in lateral movement and privilege escalation scenarios. ( Kali Linux / project-x-attacker )
 
-💻 **XFreeRDP3**: An open-source implementation of the Remote Desktop Protocol (RDP), enabling penetration testers to connect to and control Windows systems remotely for reconnaissance and post-exploitation purposes.
+💻 **XFreeRDP3**: An open-source implementation of the Remote Desktop Protocol (RDP), enabling penetration testers to connect to and control Windows systems remotely for reconnaissance and post-exploitation purposes. ( Kali Linux / project-x-attacker )
 
