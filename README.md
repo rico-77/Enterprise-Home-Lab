@@ -62,11 +62,11 @@ Kali Linux 2024.4: https://www.kali.org/get-kali/#kali-installer-images
 
 **Enterprise Tools + Defense**
 
-🖥**Microsoft Active Director**y: A directory service used for managing and organizing network resources, users, and permissions in a Windows environment.
+🖥**Microsoft Active Director**y: A directory service used for managing and organizing network resources, users, and permissions in a Windows environment. ( Set on Windows Server /project-x-dc )
 
-🛡 **Wazuh**: An open-source security monitoring platform that provides intrusion detection, log analysis, vulnerability detection, and compliance reporting.
+🛡 **Wazuh**: An open-source security monitoring platform that provides intrusion detection, log analysis, vulnerability detection, and compliance reporting. ( Set on Windows Client /project-x-win-client )
 
-📧**MailHog**: MailHog is a lightweight email testing tool that acts as a fake SMTP server. It captures all outgoing emails sent by applications, without delivering them to real inboxes. You can inspect emails via a web interface or API.
+📧**MailHog**: MailHog is a lightweight email testing tool that acts as a fake SMTP server. It captures all outgoing emails sent by applications, without delivering them to real inboxes. You can inspect emails via a web interface or API. ( Set on Linux /project-x-corp-svr )
 
 
 **Offense**
