@@ -40,7 +40,7 @@ Virtual Machines Deployed:
 
 ⬇️ **Instalation of VM's**
 
-Download the ISO files directly from the provider. Depending on when you take this program, there could be changes to the UI. The fundamentals will stay the same.
+Download the ISO files directly from the provider.
 You can download the ISO Files Using the Links:
 💡 For the Microsoft ISOs, you will have to enter in contact details, you can add dummy information.
 
@@ -70,7 +70,6 @@ Kali Linux 2024.4: https://www.kali.org/get-kali/#kali-installer-images
 
 
 **Offense**
-
 
 💀**Evil-WinRM**: A powerful Ruby-based Windows Remote Management (WinRM) client used by penetration testers to connect to and interact with Windows systems, often for post exploitation tasks such as command execution and data extraction.
 
