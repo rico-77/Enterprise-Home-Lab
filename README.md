@@ -74,6 +74,10 @@ Kali Linux 2024.4: https://www.kali.org/get-kali/#kali-installer-images
 
 🔐 **OpenSSH**: OpenSSH is a free, open-source tool that lets you securely connect to and manage another computer over a network.
 
+🗂 **Active Directory (AD)**: Active Directory (AD) is a directory service developed by Microsoft that manages users, computers, and permissions inside a Windows network.
+
+🌐 **DNS / 📡 DHCP**: DNS Converts domain names → IP addresses / DHCP automatically assigns IP addresses and network settings to devices.
+
 **Offense**
 
 💀**Evil-WinRM**: A powerful Ruby-based Windows Remote Management (WinRM) client used by penetration testers to connect to and interact with Windows systems, often for post exploitation tasks such as command execution and data extraction. ( Kali Linux / project-x-attacker )
