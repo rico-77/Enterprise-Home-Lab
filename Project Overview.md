@@ -1,6 +1,6 @@
 # Enterprise-Home-Lab
 
-Completed an end-to-end enterprise lab project with hands-on implementation, testing, and documentation. Highlights practical skills in enterprise security, attack simulation, and defensive controls, demonstrating applied knowledge of real-world IT security challenges.
+Independently deployed a full enterprise homelab environment based on industry‑aligned architecture. Configured and connected multiple virtual machines, including Windows Domain Controller, Windows 11 workstation, Linux systems, and attacker hosts on a custom network. Conducted vulnerability setups and attack simulations to evaluate security gaps, followed by defensive verification and documentation. This project demonstrates practical competence in enterprise networking, Active Directory, attack vectors, and security controls through real‑world hands‑on implementation and analysis.
 
 
 **Network Topology**
@@ -92,5 +92,7 @@ Kali Linux 2024.4: https://www.kali.org/get-kali/#kali-installer-images
 
 💻 **XFreeRDP3**: An open-source implementation of the Remote Desktop Protocol (RDP), enabling penetration testers to connect to and control Windows systems remotely for reconnaissance and post-exploitation purposes. ( Kali Linux / project-x-attacker )
 
+<img width="935" height="1033" alt="image" src="https://github.com/user-attachments/assets/cdb6d019-8513-401c-bd60-ca3ab3fcaf34" />
 
-“This lab was developed following the structure and guidance from a security lab course, with all configurations, customizations, and analyses completed independently.”
+
+--This lab was developed following the structure and guidance from a security lab course, with all configurations, customizations, and analyses completed independently.--
