@@ -101,13 +101,3 @@ Kali Linux 2024.4: https://www.kali.org/get-kali/#kali-installer-images
 ---
 
 --This lab was developed following the structure and guidance from a security lab course, with all configurations, customizations, and analyses completed independently.--
-
-Enterprise-Home-Lab/       ← Root of repo
-│
-├── README.md                ← Overview, first thing people see
-├── VM-Installation-Guide.md ← Step-by-step VM setup
-├── TOOLS.md                 ← Optional, describe tools or lab utilities
-├── CODE/                    ← Folder for scripts, automation, configs
-│   ├── script1.ps1
-│   └── setup.sh
-├── LICENSE                  ← License info, last thing
