@@ -1,9 +1,6 @@
 # Enterprise-Home-Lab
 
-The lab was fully built, configured, and validated independently, with
-additional customization, documentation, and analysis added to demonstrate
-practical understanding of enterprise security architecture, attack paths,
-and defensive controls.
+Completed an end-to-end enterprise lab project with hands-on implementation, testing, and documentation. Highlights practical skills in enterprise security, attack simulation, and defensive controls, demonstrating applied knowledge of real-world IT security challenges.
 
 
 **Network Topology**
@@ -80,6 +77,8 @@ Kali Linux 2024.4: https://www.kali.org/get-kali/#kali-installer-images
 
 🖧 **NAT Network 🔄 NAT**: NAT is the default network mode, where VirtualBox acts like a middleman for internet access / NAT Network is similar to regular NAT but allows multiple VMs to see each other while still keeping them hidden from the rest of your network. 
 
+🖥 **PowerShell**: A cross-platform task automation and configuration management framework, combining a command-line shell and scripting language for Windows
+
 
 **Offense**
 
@@ -93,3 +92,5 @@ Kali Linux 2024.4: https://www.kali.org/get-kali/#kali-installer-images
 
 💻 **XFreeRDP3**: An open-source implementation of the Remote Desktop Protocol (RDP), enabling penetration testers to connect to and control Windows systems remotely for reconnaissance and post-exploitation purposes. ( Kali Linux / project-x-attacker )
 
+
+“This lab was developed following the structure and guidance from a security lab course, with all configurations, customizations, and analyses completed independently.”
