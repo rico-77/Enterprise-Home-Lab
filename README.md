@@ -68,6 +68,11 @@ Kali Linux 2024.4: https://www.kali.org/get-kali/#kali-installer-images
 
 📧**MailHog**: MailHog is a lightweight email testing tool that acts as a fake SMTP server. It captures all outgoing emails sent by applications, without delivering them to real inboxes. You can inspect emails via a web interface or API. ( Set on Linux /project-x-corp-svr )
 
+🐳 **Docker**: Docker is an open-source platform that lets you package, ship, and run applications inside containers.
+
+🔗 **RDP**: (Remote Desktop Protocol) is a network protocol that lets you remotely access and control another computer over a network.
+
+🔐 **OpenSSH**: OpenSSH is a free, open-source tool that lets you securely connect to and manage another computer over a network.
 
 **Offense**
 
