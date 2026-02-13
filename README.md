@@ -1,5 +1,7 @@
 # Enterprise-Home-Lab
 
+Project Overview 
+
 Independently deployed a full enterprise homelab environment based on industry‑aligned architecture. Configured and connected multiple virtual machines, including Windows Domain Controller, Windows 11 workstation, Linux systems, and attacker hosts on a custom network. Conducted vulnerability setups and attack simulations to evaluate security gaps, followed by defensive verification and documentation. This project demonstrates practical competence in enterprise networking, Active Directory, attack vectors, and security controls through real‑world hands‑on implementation and analysis.
 
 
