@@ -26,7 +26,7 @@ Virtual Machines Deployed:
 | project-x-win-client  | Windows 11 Enterprise  | 2 CPU / 4096 MB | 80 GB           |
 | project-x-linux-client| Ubuntu 22.04 Desktop   | 1 CPU / 2048 MB | 80 GB           |
 | project-x-sec-work    | Security Onion         | 1 CPU / 2048 MB | 55 GB           |
-| project-x-sec-box     | Ubuntu 22.04 Desktop   | 2 CPU / 4096 MB | 80 GB           |
+| project-x-sec-boxx    | Ubuntu 22.04 Desktop   | 2 CPU / 4096 MB | 80 GB           |
 | project-x-corp-svr    | Ubuntu Server 22.04    | 1 CPU / 2048 MB | 25 GB           |
 | project-x-attacker    | Kali Linux 2024.2      | 1 CPU / 2048 MB | 55 GB           |
 
