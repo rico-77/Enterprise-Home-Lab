@@ -78,6 +78,9 @@ Kali Linux 2024.4: https://www.kali.org/get-kali/#kali-installer-images
 
 🌐 **DNS / 📡 DHCP**: DNS Converts domain names → IP addresses / DHCP automatically assigns IP addresses and network settings to devices.
 
+🖧 **NAT Network 🔄 NAT**: NAT is the default network mode, where VirtualBox acts like a middleman for internet access / NAT Network is similar to regular NAT but allows multiple VMs to see each other while still keeping them hidden from the rest of your network. 
+
+
 **Offense**
 
 💀**Evil-WinRM**: A powerful Ruby-based Windows Remote Management (WinRM) client used by penetration testers to connect to and interact with Windows systems, often for post exploitation tasks such as command execution and data extraction. ( Kali Linux / project-x-attacker )
