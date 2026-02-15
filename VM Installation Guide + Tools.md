@@ -74,6 +74,7 @@ Navigate to File ➔ Tools ➔ Network Manager.
  
 
 Select NAT Networks ➔ “Create”.
+
 <img width="318" height="111" alt="image" src="https://github.com/user-attachments/assets/3179ca86-4652-4cfc-b98b-6e2294ef8d72" />
 
 
