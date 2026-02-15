@@ -50,6 +50,7 @@
 ----
 
 🖥️ **Virtual Machines**
+
 •💻 Platform: VirtualBox
 
 The best option is to download from the original page (https://www.virtualbox.org/) 
