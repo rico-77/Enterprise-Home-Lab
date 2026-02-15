@@ -4,7 +4,9 @@
 🖥️ **Virtual Machines**
 
 •💻 Platform: VirtualBox
+
  <br>
+ 
 
 🖧 **Servers**
 
@@ -13,7 +15,9 @@
 •🏢 Corporate Server: Ubuntu Server 22.04
 
 •🛡️ Security Server: Ubuntu Server 22.04
-<br>
+
+ <br>
+ 
 
 🖥️ **Workstations**
 
@@ -22,14 +26,18 @@
 •🐧 Ubuntu Desktop 22.04
 
 •🛡️ Security Onion
-****
+
+ <br>
+ 
 
 🛠️ **Tools**
 
 •📧 MailHog Email Server
 
 •📊 Wazuh SIEM Setup
-<br>
+
+ <br>
+ 
 
 ⚔️ **Security Exercises**
 
