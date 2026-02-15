@@ -59,8 +59,19 @@ The best option is to download from the original page (https://www.virtualbox.or
 
 
 
+ <br>
+ 
 
+There are different Network settings available for VirtualBox,for this project, we will be using the NAT Network setting, this will allow us to have the VMs communicate with one another, while also having access to the Internet.
 
+ <br>
+ 
+Navigate to File ➔ Tools ➔ Network Manager.
+ 
+<img width="458" height="221" alt="image" src="https://github.com/user-attachments/assets/de4c0697-5801-4e41-8eef-89d73243f445" />
 
+Select NAT Networks ➔ “Create”.
+<img width="318" height="111" alt="image" src="https://github.com/user-attachments/assets/3179ca86-4652-4cfc-b98b-6e2294ef8d72" />
 
+At the bottom, name the NatNetwork “project-x-network” and choose an IPv4 prefix (10.0.0.0/24)
 
