@@ -80,3 +80,5 @@ Select NAT Networks ➔ “Create”.
 
 At the bottom, name the NatNetwork “project-x-network” and choose an IPv4 prefix (10.0.0.0/24)
 
+Each time a new Virtual Machine has been added,will be selected “project-x-network” and NAT Network for all VMs. This way we will create a lab environment.
+
