@@ -70,12 +70,14 @@ Navigate to File ➔ Tools ➔ Network Manager.
  
 <img width="458" height="221" alt="image" src="https://github.com/user-attachments/assets/de4c0697-5801-4e41-8eef-89d73243f445" />
 
+
  <br>
  
 
 Select NAT Networks ➔ “Create”.
 
-<img width="318" height="111" alt="image" src="https://github.com/user-attachments/assets/3179ca86-4652-4cfc-b98b-6e2294ef8d72" />
+![dwqdwqd](https://github.com/user-attachments/assets/46bad2ee-4fe7-4cff-b37e-a0546f059f2c)
+
 
 
 At the bottom, name the NatNetwork “project-x-network” and choose an IPv4 prefix (10.0.0.0/24)
