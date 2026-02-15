@@ -1,9 +1,11 @@
 🏗️ **Enterprise-Home-Lab Setup Overview**
 <br>
+
 🖥️ **Virtual Machines**
 
 •💻 Platform: VirtualBox
-<br>
+ <br>
+
 🖧 **Servers**
 
 •🏢 AD Server: Windows Server 2025
@@ -11,8 +13,8 @@
 •🏢 Corporate Server: Ubuntu Server 22.04
 
 •🛡️ Security Server: Ubuntu Server 22.04
-
 <br>
+
 🖥️ **Workstations**
 
 •💻 Windows 11 Workstation
@@ -20,14 +22,15 @@
 •🐧 Ubuntu Desktop 22.04
 
 •🛡️ Security Onion
+****
 
-<br>
 🛠️ **Tools**
 
 •📧 MailHog Email Server
 
 •📊 Wazuh SIEM Setup
 <br>
+
 ⚔️ **Security Exercises**
 
 •🔓 Configure Vulnerable Environment
