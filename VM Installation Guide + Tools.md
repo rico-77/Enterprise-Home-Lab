@@ -14,7 +14,7 @@
 
 •🏢 AD Server: Windows Server 2025 (AD)
 
-•🏢 Corporate Server: Ubuntu Server 22.04 (MailHog)
+•🏢 Corporate Server: Ubuntu Server 22.04 (JumpBox)
 
 •🛡️ Security Server: Ubuntu Server 22.04 (Wazuh)
 
