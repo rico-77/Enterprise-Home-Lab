@@ -12,22 +12,25 @@
 
 🖧 **Servers**
 
-•🏢 AD Server: Windows Server 2025
+•🏢 AD Server: Windows Server 2025 (AD)
 
-•🏢 Corporate Server: Ubuntu Server 22.04
+•🏢 Corporate Server: Ubuntu Server 22.04 (MailHog)
 
-•🛡️ Security Server: Ubuntu Server 22.04
+•🛡️ Security Server: Ubuntu Server 22.04 (Wazuh)
 
  <br>
  
 
 🖥️ **Workstations**
 
-•💻 Windows 11 Workstation
+•💻 Windows 11 Workstation (Windows Client)
 
-•🐧 Ubuntu Desktop 22.04
+•🐧 Ubuntu Desktop 22.04 (Linux Client)
 
-•🛡️ Security Onion
+•🛡️ Security Onion (Linux)
+
+•🧑‍💻 Attacker (Kali Linux)
+
 
  <br>
  
