@@ -6,7 +6,8 @@ Independently deployed a full enterprise homelab environment based on industryâ€
 
 
 **Network Topology**
-<img width="1566" height="1042" alt="image" src="https://github.com/user-attachments/assets/5019e4e3-80be-4b94-80cc-127fc9357bef" />
+![BBBBB](https://github.com/user-attachments/assets/0328f764-2c65-418a-9929-de34b039cdc8)
+
 
 **Oracle VirtualBox Manager used as primary VM.**
 
