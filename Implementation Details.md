@@ -15,7 +15,7 @@
 
 •🛡️ Security Server: Ubuntu Server 22.04 (Wazuh)
 
-
+ <br>
 
 **Windows Server 2025 (AD)**
 
