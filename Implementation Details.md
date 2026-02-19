@@ -19,5 +19,6 @@
 
 **Windows Server 2025 (AD)**
 
+![Bez nasavca](https://github.com/user-attachments/assets/42d3b756-a254-40ab-8158-7a6d0f18f327)
 
 • At the start of
