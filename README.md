@@ -101,5 +101,9 @@ Kali Linux 2024.4: https://www.kali.org/get-kali/#kali-installer-images
 <img width="935" height="1033" alt="image" src="https://github.com/user-attachments/assets/cdb6d019-8513-401c-bd60-ca3ab3fcaf34" />
 
 ---
+The Idea / Game Plan
+
+
+
 
 --This lab was developed following the structure and guidance from a security lab course, with all configurations, customizations, and analyses completed independently.--
