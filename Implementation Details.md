@@ -34,7 +34,7 @@ All of this will allow us at the end is to add Users to our AD, in our case, tho
  <br>
 
 
-**Ubuntu Server 22.04 (JumpBox)**
+**Corporate Server: Ubuntu Server (JumpBox)**
 
 • Ubuntu Server will act as a JumpBox on our Lab environment, this means it will be set up as a server that will be secure and will provide secure access to the closed environment. Additionally, this server will provide FTP, DNS, and email access. 
 
@@ -48,6 +48,12 @@ Because we will provide FTP, DNS, and email access. For this infrastructure to w
 • Issues encountered: No active problems encountered, but DNS, DHCP and AD issues can arise from time to time when in active use.
 
 
+ <br>
+
+**Security Server: Ubuntu Server 22.04 (Wazuh)**
+
+
+• Ubuntu Server will act 
 
 
 
