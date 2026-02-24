@@ -31,4 +31,4 @@ All of this will allow us at the end is to add Users to our AD, in our case, tho
 
 **Ubuntu Server 22.04 (JumpBox)**
 
-• Ubuntu Server 22.0
+• Ubuntu Server 22.0 
