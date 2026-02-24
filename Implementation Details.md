@@ -29,7 +29,8 @@ Let's get to the setup and how it was done for this Lab. Because we are using a 
 All of this will allow us at the end is to add Users to our AD, in our case, those will be Linux and Windows clients on our network.
 
 • Issues encountered: no big ones that could not be resolved with little troubleshooting, but after the final setup of the Lab and on the steps when adding Clients to AD, I often had an issue with DNS. After hours spent trying with reconnecting the Clients and other advice found on the web, the best solution was restarting the DNS and Client side, oh the misery :D.  
-![AD](https://github.com/user-attachments/assets/acdcf2fe-1a3a-4dde-a22c-d3625de90e08)
+![AD](https://github.com/user-attachments/assets/ff29d571-b5d5-42ef-91f7-b3a19be29130)
+
 
 
  <br>
