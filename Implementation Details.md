@@ -48,6 +48,7 @@ Because we will provide FTP, DNS, and email access. For this infrastructure to w
 
 
 • Issues encountered: No active problems encountered, but DNS, DHCP and AD issues can arise from time to time when in active use.
+     ![JS](https://github.com/user-attachments/assets/7d58aee9-6ea7-4994-8528-cc0cf53e9aad)
 
 
  <br>
