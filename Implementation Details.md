@@ -27,6 +27,7 @@
 
 
 Let's get to the setup and how it was done for this Lab. Because we are using a VM the primary installation was done over ISO that we attached to the VM and set up an on-premises infrastructure that we can fully control, provide minimum system requirements in memory and processing, and we can start. First task is assining of static IP Address, basically we are getting the AD online, and that will be fist step in creating our internal network, to do that we will promote the AD to a Domain Controler. After completing all work on AD regarding network and domein we switch to the wider network settings and get to DNS settings and DHCP settings, both are done over the Server Manager. This Domain Controller we created will handle DNS requests for all connected devices, including workstations and other networked systems, and DHCP component will allow the Domain Controller to assign IP addresses to its connected workstations, servers, and devices.
+Space and storage can be found on README.
 
 
 All of this will allow us at the end is to add Users to our AD, in our case, those will be Linux and Windows clients on our network.
@@ -44,6 +45,7 @@ All of this will allow us at the end is to add Users to our AD, in our case, tho
 
 
 Let's get to the setup and how it was done for this Lab. Because we are using a VM the primary installation was done over ISO that we attached to the VM and set up an on-premises infrastructure that we can fully control, provide minimum system requirements in memory and processing, and we can start, same as with other ISO. Once the installation part is completed + the server is connected to NATnetwork, we are on the way to connect this server to AD. All users will connect to the Server over SSH, making it a secure connection type.
+Space and storage can be found on README.
 
 
 Because we will provide FTP, DNS, and email access. For this infrastructure to work on our JumpServer, we will be downloading and installing Docker Engine, which will allow us to run the containers on the Server, in our case we will be using it for a fake SMTP, more about that when we talk about MailHog.
@@ -68,9 +70,18 @@ This will be the first use of this server, and it will be made possible by using
 
 
 Let's get to the setup and how it was done for this Lab. Because we are using a VM the primary installation was done over ISO that we attached to the VM and set up an on-premises infrastructure that we can fully control, provide minimum system requirements in memory and processing, and we can start, same as with other ISO. Once the installation part is completed + the server is connected to NATnetwork, we are on the way to connect this server to AD using winbind.
+Space and storage can be found on README.
 
 
-• Wazuh 
+• Wazuh SIEM - Refers to a system that combines log management, threat detection, and incident response to help organizations monitor and secure their IT environments. Wazuh acts as a SIEM solution by collecting and analyzing security data from multiple sources, detecting threats in real time, and facilitating efficient incident response.
+
+Wazuh relies on an agent-based ecosystem. Software agents are deployed to workstations, servers, containers, and virtual machines, which send data to Wazuh’s server for processing, aggregation, and visualization of security-relevant information.
+
+We will use Wazuh as our central hub for security logging, analysis, defense, and remediation while we conduct cyber-attack and defend exercises.
+
+Wazuh provides a solid foundation for gathering relevant data while applying remediations. We will be able to actively view and visualize what happens when attackers are able to achieve initial access, lateral movement, elevation of privileges, persistence, and exfiltration.
+
+As part of this project, we will be configuring Wazuh’s SIEM, XDR, and File Integrity Monitoring (FIM) modules. The Vulnerability Detection module already has a default configuration applied
 
 
 
