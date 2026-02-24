@@ -52,11 +52,11 @@ Because we will provide FTP, DNS, and email access. For this infrastructure to w
 • Issues encountered: No active problems encountered, but DNS, DHCP and AD issues can arise from time to time when in active use.
 
 
-• MailHog: MailHog is a lightweight email testing tool that acts as a fake SMTP server. It captures all outgoing emails sent by applications, without delivering them to real inboxes. You can inspect emails via a web interface (Web UI: Accessible on port 8025) or API. We will be using MailHog to simulate a business email server, which will be used as part of our phishing exercise in the Cyber Attack module.
+• MailHog: MailHog is a lightweight email testing tool that acts as a fake SMTP server. It captures all outgoing emails sent by applications without delivering them to real inboxes. You can inspect emails via a web interface (Web UI accessible on port 8025), the SMTP service (default port 1025), or through its API. We will be using MailHog to simulate a business email server, which will be used as part of our phishing exercise in the Cyber Attack module.
 
-So this will be our first use for this Server and it will be possible by using Docker. MailHog provides an official Docker image ready to use from Docker Hub, all is available online, it is up to us what to chose an incorporet on the lab. 
+This will be the first use of this server, and it will be made possible by using Docker. MailHog provides an official Docker image ready to use from Docker Hub. In our case, we will configure MailHog SMTP on the server and set up an Email Poller Script on our Linux client. All of this will be used in our lab when executing an attack scenario (phishing attack).
 
-In our case, we will be using MailHog SMTP configured on the server and an Email Poller Script set on our Linux Client 
+![hog](https://github.com/user-attachments/assets/f67197c5-63e8-4275-9626-c9c3eb07aa08)
 
 
  <br>
