@@ -45,6 +45,8 @@ Let's get to the setup and how it was done for this Lab. Because we are using a 
 Because we will provide FTP, DNS, and email access. For this infrastructure to work on our JumpServer, we will be downloading and installing Docker Engine that will allow us to run the containers on different machines on the Lab.
 
 
+• Issues encountered: No active problems encountered, but DNS, DHCP and AD issues can arise from time to time when in active use.
+
 
 
 
