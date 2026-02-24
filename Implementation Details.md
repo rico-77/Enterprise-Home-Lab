@@ -38,7 +38,7 @@ All of this will allow us at the end is to add Users to our AD, in our case, tho
  <br>
 
 
-**Corporate Server: Ubuntu Server (JumpBox)**
+**Corporate Server: Ubuntu Server (JumpBox)** + **MailHog**
 
 • Ubuntu Server will act as a JumpBox on our Lab environment, this means it will be set up as a server that will be secure and will provide secure access to the closed environment. Additionally, this server will provide FTP, DNS, and email access. 
 
@@ -51,6 +51,12 @@ Because we will provide FTP, DNS, and email access. For this infrastructure to w
 
 • Issues encountered: No active problems encountered, but DNS, DHCP and AD issues can arise from time to time when in active use.
 
+
+• MailHog: MailHog is a lightweight email testing tool that acts as a fake SMTP server. It captures all outgoing emails sent by applications, without delivering them to real inboxes. You can inspect emails via a web interface (Web UI: Accessible on port 8025) or API. We will be using MailHog to simulate a business email server, which will be used as part of our phishing exercise in the Cyber Attack module.
+
+So this will be our first use for this Server and it will be possible by using Docker. MailHog provides an official Docker image ready to use from Docker Hub, all is available online, it is up to us what to chose an incorporet on the lab. 
+
+In our case, we will be using MailHog SMTP configured on the server and an Email Poller Script set on our Linux Client 
 
 
  <br>
