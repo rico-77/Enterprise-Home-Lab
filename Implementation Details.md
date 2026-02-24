@@ -46,7 +46,7 @@ All of this will allow us at the end is to add Users to our AD, in our case, tho
 Let's get to the setup and how it was done for this Lab. Because we are using a VM the primary installation was done over ISO that we attached to the VM and set up an on-premises infrastructure that we can fully control, provide minimum system requirements in memory and processing, and we can start, same as with other ISO. Once the installation part is completed + the server is connected to NATnetwork, we are on the way to connect this server to AD. All users will connect to the Server over SSH, making it a secure connection type.
 
 
-Because we will provide FTP, DNS, and email access. For this infrastructure to work on our JumpServer, we will be downloading and installing Docker Engine that will allow us to run the containers on different machines on the Lab.
+Because we will provide FTP, DNS, and email access. For this infrastructure to work on our JumpServer, we will be downloading and installing Docker Engine, which will allow us to run the containers on the Server, in our case we will be using it for a fake SMTP, more about that when we talk about MailHog.
 
 
 • Issues encountered: No active problems encountered, but DNS, DHCP and AD issues can arise from time to time when in active use.
