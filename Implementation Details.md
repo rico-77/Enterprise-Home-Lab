@@ -64,7 +64,14 @@ This will be the first use of this server, and it will be made possible by using
 **Security Server: Ubuntu Server 22.04 (Wazuh)**
 
 
-• Ubuntu Server will act 
+• Ubuntu Server will act as a Security Server. We opted for this option because we will need a dedicated server for security, and incorporating all in just one JupBox would be a problem for our Lab and VM, a dedicated server with a SIEM is a more stable option.
+
+
+Let's get to the setup and how it was done for this Lab. Because we are using a VM the primary installation was done over ISO that we attached to the VM and set up an on-premises infrastructure that we can fully control, provide minimum system requirements in memory and processing, and we can start, same as with other ISO. Once the installation part is completed + the server is connected to NATnetwork, we are on the way to connect this server to AD using winbind.
+
+
+• Wazuh 
+
 
 
 
