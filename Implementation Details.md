@@ -128,25 +128,82 @@ This reinforced the critical dependency between Active Directory and DNS.
  <br>
 
 
-**Corporate Server: Ubuntu Server (JumpBox)** + **MailHog**
+# 🏢 Corporate Server – Ubuntu JumpBox + MailHog
 
-• Ubuntu Server will act as a JumpBox on our Lab environment, this means it will be set up as a server that will be secure and will provide secure access to the closed environment. Additionally, this server will provide FTP, DNS, and email access. 
+## Overview
 
+The Ubuntu Server acts as a **JumpBox** in our lab environment, providing:
 
-Let's get to the setup and how it was done for this Lab. Because we are using a VM the primary installation was done over ISO that we attached to the VM and set up an on-premises infrastructure that we can fully control, provide minimum system requirements in memory and processing, and we can start, same as with other ISO. Once the installation part is completed + the server is connected to NATnetwork, we are on the way to connect this server to AD. All users will connect to the Server over SSH, making it a secure connection type. We will use this machine as a mailing server by installing MailHog inside a Docker container. MailHog will run on ports 1025 (SMTP) and 8025 (web interface). We will also install a Python polling script that will work with MailHog to simulate a phishing attack scenario.
-Space and storage can be found on README.
+- Secure SSH access for all users  
+- FTP services  
+- DNS services  
+- Email simulation services (MailHog)
 
+This server serves as the gateway to the lab, enabling secure management of the closed environment while supporting other lab infrastructure.
 
-Because we will provide FTP, DNS, and email access. For this infrastructure to work on our JumpServer, we will be downloading and installing Docker Engine, which will allow us to run the containers on the Server, in our case we will be using it for a fake SMTP, more about that when we talk about MailHog.
+---
 
-• MailHog: MailHog is a lightweight email testing tool that acts as a fake SMTP server. It captures all outgoing emails sent by applications without delivering them to real inboxes. You can inspect emails via a web interface (Web UI accessible on port 8025), the SMTP service (default port 1025), or through its API. We will be using MailHog to simulate a business email server, which will be used as part of our phishing exercise in the Cyber Attack module.
+## Lab Architecture Decision
 
-This will be the first use of this server, and it will be made possible by using Docker. MailHog provides an official Docker image ready to use from Docker Hub. In our case, we will configure MailHog SMTP on the server and set up an Email Poller Script on our Linux client. All of this will be used in our lab when executing an attack scenario (phishing attack).
+The server is deployed as a **Virtual Machine using an Ubuntu ISO**, giving full control over:
 
-• Installation steps: install Linux Ubuntu → reboot → set Administrator password → log in → configure static IP → join the machine to Active Directory with sudo net ad join -U Administrator using the AD Administrator password → verify join and log in as CORP+Administrator → install Docker Engine on the Ubuntu host (follow official Docker install commands for Ubuntu) → test Docker with docker pull hello-world and docker run hello-world → create a directory /home/mailhog → inside it create a docker-compose.yml with the MailHog service (image mailhog/mailhog mapping ports 1025:1025 and 8025:8025) → save file → run sudo docker compose up -d to start MailHog → open a browser pointed at http://localhost:8025 to view the MailHog UI → create a test Python email script (test_message.py) with standard smtplib to send a message via localhost:1025 → make it executable and run it → confirm the email appears in the MailHog UI → optionally create an email poller script under the Linux client if needed for later exercises.
+- CPU, memory, and storage allocation  
+- Network connectivity (NAT network)  
+- Snapshotting, testing, and rebuilding safely  
 
-• Issues encountered: No active problems encountered, but DNS, DHCP and AD issues can arise from time to time when in active use.
+All users connect via **SSH**, ensuring encrypted remote access.  
+This server also hosts **MailHog** in a Docker container for email testing.
 
+---
+
+## Docker & MailHog
+
+**Docker Engine** is installed on the Ubuntu host to enable containerized services.  
+We use it to run **MailHog**, a lightweight email testing tool that:
+
+- Acts as a fake SMTP server (port 1025)  
+- Provides a Web UI to inspect emails (port 8025)  
+- Can be interacted with via API  
+
+MailHog simulates a business email server, which is used in the **Cyber Attack module** to conduct controlled phishing exercises.
+
+The first use of this server demonstrates how Docker simplifies deployment:
+
+1. Pull official MailHog Docker image  
+2. Configure SMTP and Web UI ports  
+3. Set up a Python email polling script on a Linux client to monitor messages  
+
+This allows the lab to simulate email-based attacks safely.
+
+---
+
+## Installation Steps (Technical Flow)
+
+Install Ubuntu → reboot → set Administrator password → log in → configure static IP → join Active Directory (`sudo net ad join -U Administrator`) → verify join and log in as `CORP+Administrator` → install Docker Engine → test Docker (`docker pull hello-world` and `docker run hello-world`) → create `/home/mailhog` directory → create `docker-compose.yml` for MailHog (image `mailhog/mailhog`, ports `1025:1025` and `8025:8025`) → run `sudo docker compose up -d` → open browser at `http://localhost:8025` → create Python test email script (`test_message.py`) → send test email via `localhost:1025` → confirm receipt in MailHog UI → optionally deploy email poller script on client.
+
+---
+
+## Integration With Lab Environment
+
+Once the JumpBox is operational:
+
+- All clients can securely connect via SSH  
+- MailHog captures all outgoing lab emails for analysis  
+- The Python polling script allows simulation of phishing attacks  
+- FTP, DNS, and other services are available for testing
+
+This server becomes the central point for controlled lab experiments involving networking and email security.
+
+---
+
+## Challenges & Lessons Learned
+
+No major blockers were encountered during setup, but as expected:
+
+- DNS, DHCP, and AD issues occasionally arose when joining or managing clients  
+- Troubleshooting reinforced the importance of proper IP and network configuration  
+
+> Personal insight: Docker greatly simplified MailHog deployment — what would normally take multiple configuration steps on a full mail server was completed in minutes, highlighting the power of containerized services in lab environments.
 
 
 ![hog](https://github.com/user-attachments/assets/f67197c5-63e8-4275-9626-c9c3eb07aa08)
