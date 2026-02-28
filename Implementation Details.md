@@ -37,6 +37,109 @@ All of this will allow us at the end is to add Users to our AD, in our case, tho
 • Issues encountered: no big ones that could not be resolved with little troubleshooting, but after the final setup of the Lab and on the steps when adding Clients to AD, I often had an issue with DNS. After hours spent trying with reconnecting the Clients and other advice found on the web, the best solution was restarting the DNS and Client side, oh the misery :D.  
 
 
+
+
+ <br>
+
+# 🏢 Windows Server 2025 – Active Directory (Core Infrastructure)
+
+## Overview
+
+Windows Server 2025 running Active Directory is the core of this lab environment.  
+Active Directory handles authentication, authorization, and identity management.  
+
+Because of its central role in enterprise environments, AD is a common target for attackers.  
+In this lab, some early-stage configurations intentionally use open ports and weak credentials to simulate a realistic attack surface for security testing.
+
+This Domain Controller forms the foundation of the internal corporate network.
+
+---
+
+## Lab Architecture Decision
+
+The server is deployed as a **Virtual Machine using an ISO image**, allowing a fully controlled on-premises setup.  
+
+Benefits of this approach:
+
+- Full control over CPU, RAM, and storage  
+- Network segmentation using NAT Network  
+- Safe snapshot, reset, and rebuild capabilities  
+- Realistic enterprise-style environment  
+
+The Domain Controller was the first system brought online, as all other lab services depend on it.
+
+---
+
+## Network Configuration
+
+Assigning a **static IP address** was the first step:
+
+- IP Address: `10.0.0.5`  
+- Subnet Mask: `255.255.255.0`  
+- Default Gateway: `10.0.0.1`  
+- DNS Server: `10.0.0.5`
+
+After network setup, the server was promoted to **Domain Controller** and a new forest was created:
+corp.project-x-dc.com
+
+
+---
+
+## Roles Installed
+
+Using Server Manager, the following roles were installed:
+
+- Active Directory Domain Services (AD DS)  
+- DNS Server  
+- DHCP Server  
+- File and Storage Services  
+- IIS (for future lab modules)  
+
+### DNS
+The Domain Controller handles internal DNS for all connected clients.  
+Forwarder configured: `8.8.8.8` for external resolution.
+
+### DHCP
+Automatically assigns IP addresses to connected clients.
+
+- Scope Range: `10.0.0.100 – 10.0.0.200`  
+- Subnet: `255.255.255.0`  
+- Router: `10.0.0.1`  
+
+---
+
+## Installation Summary
+
+Mount Windows Server ISO → Install Windows Server (Desktop Experience) → Configure static IP → Install AD DS, DNS, DHCP roles → Promote to Domain Controller → Create new forest → Configure DNS forwarder → Create DHCP scope → Reboot → Verify services → Add users → Join clients to domain.
+
+---
+
+## Integration With Lab Environment
+
+Once Active Directory was operational:
+
+- Windows clients were domain-joined  
+- Linux clients were integrated  
+- Centralized authentication became active  
+- Internal enterprise structure established  
+
+This setup enables all lab services to operate under a managed corporate network.
+
+---
+
+## Challenges & Lessons Learned
+
+No major blockers occurred, but DNS issues were frequent when joining clients to the domain.  
+
+Sometimes, client machines failed to authenticate despite correct configuration.  
+After troubleshooting (network resets, reviewing settings, online research), the issue was resolved by restarting DNS services and affected clients.
+
+> Lesson learned: In AD environments, if authentication fails unexpectedly, always verify DNS first.
+
+This reinforced the critical dependency between Active Directory and DNS.
+
+
+
 ![all dc](https://github.com/user-attachments/assets/63dae2c4-ed1d-4f17-b54d-9c6d831040a6)
 
 
