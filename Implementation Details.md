@@ -21,29 +21,10 @@
  <br>
 
 
-**Windows Server 2025 (AD)**
-
-• Windows Server, and primarily Active Directory, are the core of this entire lab setup. It handles all the Authentication, Authorization, and Management. As in many systems, AD is a prime target for attackers due to its role, the same will be in our environment. Due to our plan for  this Lab, our AD settings will be variable for get go, that means we will be using open ports and weak credentials.
 
 
-Let's get to the setup and how it was done for this Lab. Because we are using a VM the primary installation was done over ISO that we attached to the VM and set up an on-premises infrastructure that we can fully control, provide minimum system requirements in memory and processing, and we can start. First task is assining of static IP Address, basically we are getting the AD online, and that will be fist step in creating our internal network, to do that we will promote the AD to a Domain Controler. After completing all work on AD regarding network and domein we switch to the wider network settings and get to DNS settings and DHCP settings, both are done over the Server Manager. This Domain Controller we created will handle DNS requests for all connected devices, including workstations and other networked systems, and DHCP component will allow the Domain Controller to assign IP addresses to its connected workstations, servers, and devices.
-Space and storage can be found on README.
+# 🏢 Windows Server 2025 – Active Directory
 
-
-• Installation steps: Mount the Windows Server 2022/2025 ISO → boot the VM → choose Windows Server (Desktop Experience) → accept license → create new partition on Disk 0 → install Windows → reboot → set Administrator password → log in → configure static IP (IP: 10.0.0.5 | Subnet: 255.255.255.0 | Gateway: 10.0.0.1 | DNS: 10.0.0.5) → open Server Manager → Add Roles and Features → install Active Directory Domain Services, DNS Server, DHCP Server, File Services, and IIS → after installation click “Promote this server to a domain controller” → choose “Add a new forest” → set domain name (corp.project-x-dc.com) → set DSRM password → complete configuration and reboot → open DNS Manager and add forwarder (8.8.8.8) → open DHCP Manager → create new IPv4 scope (range 10.0.0.100–10.0.0.200, subnet 255.255.255.0, router 10.0.0.1)
-
-All of this will allow us at the end is to add Users to our AD, in our case, those will be Linux and Windows clients on our network.
-
-• Issues encountered: no big ones that could not be resolved with little troubleshooting, but after the final setup of the Lab and on the steps when adding Clients to AD, I often had an issue with DNS. After hours spent trying with reconnecting the Clients and other advice found on the web, the best solution was restarting the DNS and Client side, oh the misery :D.  
-
-
-
-
- <br>
-
-# 🏢 Windows Server 2025 – Active Directory (Core Infrastructure)
-
-## Overview
 
 Windows Server 2025 running Active Directory is the core of this lab environment.  
 Active Directory handles authentication, authorization, and identity management.  
