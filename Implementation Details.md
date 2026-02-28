@@ -30,9 +30,13 @@ Let's get to the setup and how it was done for this Lab. Because we are using a 
 Space and storage can be found on README.
 
 
+• Installation steps: Mount the Windows Server 2022/2025 ISO → boot the VM → choose Windows Server (Desktop Experience) → accept license → create new partition on Disk 0 → install Windows → reboot → set Administrator password → log in → disable sleep/screen timeout → configure static IP (IP: 10.0.0.5 | Subnet: 255.255.255.0 | Gateway: 10.0.0.1 | DNS: 10.0.0.5) → open Server Manager → Add Roles and Features → install Active Directory Domain Services, DNS Server, DHCP Server, File Services, and IIS → after installation click “Promote this server to a domain controller” → choose “Add a new forest” → set domain name (corp.project-x-dc.com) → set DSRM password → complete configuration and reboot → open DNS Manager and add forwarder (8.8.8.8) → open DHCP Manager → create new IPv4 scope (range 10.0.0.100–10.0.0.200, subnet 255.255.255.0, router 10.0.0.1)
+
 All of this will allow us at the end is to add Users to our AD, in our case, those will be Linux and Windows clients on our network.
 
 • Issues encountered: no big ones that could not be resolved with little troubleshooting, but after the final setup of the Lab and on the steps when adding Clients to AD, I often had an issue with DNS. After hours spent trying with reconnecting the Clients and other advice found on the web, the best solution was restarting the DNS and Client side, oh the misery :D.  
+
+
 ![all dc](https://github.com/user-attachments/assets/63dae2c4-ed1d-4f17-b54d-9c6d831040a6)
 
 
