@@ -33,6 +33,7 @@ Space and storage can be found on README.
 All of this will allow us at the end is to add Users to our AD, in our case, those will be Linux and Windows clients on our network.
 
 • Issues encountered: no big ones that could not be resolved with little troubleshooting, but after the final setup of the Lab and on the steps when adding Clients to AD, I often had an issue with DNS. After hours spent trying with reconnecting the Clients and other advice found on the web, the best solution was restarting the DNS and Client side, oh the misery :D.  
+![all dc](https://github.com/user-attachments/assets/63dae2c4-ed1d-4f17-b54d-9c6d831040a6)
 
 
 
