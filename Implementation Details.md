@@ -84,6 +84,8 @@ Wazuh provides a solid foundation for gathering relevant data while applying rem
 
 As part of this project, we will be configuring Wazuh’s SIEM, XDR, and File Integrity Monitoring (FIM) modules. The Vulnerability Detection module already has a default configuration applied
 
+![wazuh A1](https://github.com/user-attachments/assets/1a570d7c-13f9-41f7-9949-ce476bbdfaee)
+
 
 
 
