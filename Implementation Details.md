@@ -211,30 +211,143 @@ No major blockers were encountered during setup, but as expected:
 
  <br>
 
-**Security Server: Ubuntu Server 22.04 (Wazuh)**
+# 🔐 Security Server – Ubuntu 22.04 + Wazuh SIEM
 
+## Overview
 
-• Ubuntu Server will act as a Security Server. We opted for this option because we will need a dedicated server for security, and incorporating all in just one JupBox would be a problem for our Lab and VM, a dedicated server with a SIEM is a more stable option.
+The Security Server is a dedicated **Ubuntu Server 22.04** instance running **Wazuh SIEM**.
 
+Instead of combining security tooling with the JumpBox, I intentionally deployed a separate server. This decision improves:
 
-Let's get to the setup and how it was done for this Lab. Because we are using a VM the primary installation was done over ISO that we attached to the VM and set up an on-premises infrastructure that we can fully control, provide minimum system requirements in memory and processing, and we can start, same as with other ISO. Once the installation part is completed + the server is connected to NATnetwork, we are on the way to connect this server to AD using winbind.
-Space and storage can be found on README.
+- Stability
+- Performance isolation
+- Realistic enterprise architecture
+- Scalability for logging and monitoring
 
+In real-world environments, security monitoring systems are rarely hosted on general-purpose access servers. Separating roles reflects better operational practice.
 
+---
 
-• Wazuh SIEM - Refers to a system that combines log management, threat detection, and incident response to help organizations monitor and secure their IT environments. Wazuh acts as a SIEM solution by collecting and analyzing security data from multiple sources, detecting threats in real time, and facilitating efficient incident response.
+## Architecture Decision
 
-Wazuh relies on an agent-based ecosystem. Software agents are deployed to workstations, servers, containers, and virtual machines, which send data to Wazuh’s server for processing, aggregation, and visualization of security-relevant information.
+The server was deployed as a **Virtual Machine using an Ubuntu ISO**, allowing full control over:
 
-We will use Wazuh as our central hub for security logging, analysis, defense, and remediation while we conduct cyber-attack and defend exercises.
+- CPU and RAM allocation (SIEM tools are resource-intensive)
+- Storage management for log retention
+- NAT network segmentation
+- Snapshot-based recovery
 
-Wazuh provides a solid foundation for gathering relevant data while applying remediations. We will be able to actively view and visualize what happens when attackers are able to achieve initial access, lateral movement, elevation of privileges, persistence, and exfiltration.
+After installation, the server was:
 
-As part of this project, we will be configuring Wazuh’s SIEM, XDR, and File Integrity Monitoring (FIM) modules. The Vulnerability Detection module already has a default configuration applied
+- Connected to the internal NAT network
+- Joined to Active Directory using `winbind`
+- Prepared for centralized log ingestion
 
-• Installation steps: Sign into the Wazuh server VM (Security Server) as sec-user → escalate with sudo → install curl if needed (sudo apt install curl) → download and start the Wazuh installation script with curl -sO https://packages.wazuh.com/4.9/wazuh-install.sh && sudo bash ./wazuh-install.sh -a -i → allow the installer to complete (this installs the Wazuh Indexer and Server) → note the generated admin credentials and passwords from the output or from the wazuh-passwords.txt file → open a browser to https://localhost → accept the security warning → log in with the Wazuh credentials → once logged into the dashboard, deploy Wazuh agents on endpoints by installing the appropriate agent packages (Windows MSI for Windows clients, and DEB package for Linux client) and register each agent with the Wazuh manager using the manager’s IP and authorization key → start the agents on endpoints (NET START WAZUH on Windows, systemctl enable --now wazuh-agent on Linux) → in the Wazuh dashboard, create agent groups for Linux and Windows → assign each agent to the correct group → edit the agent.conf for each group to onboard custom logs (e.g., Windows event logs, Linux syslog/auth/audit logs) and save.
+This setup allows domain-based authentication while maintaining security role separation.
 
+---
+
+## Why Wazuh?
+
+Wazuh is an open-source **SIEM and XDR platform** that provides:
+
+- Log collection and analysis
+- Threat detection
+- File Integrity Monitoring (FIM)
+- Vulnerability detection
+- Incident response capabilities
+
+Wazuh operates using an **agent-based architecture**:
+
+- Agents are deployed on endpoints (Windows, Linux, etc.)
+- Agents send logs and telemetry to the Wazuh Server
+- The server processes, correlates, and visualizes events
+
+In this lab, Wazuh acts as the central security monitoring hub during offensive and defensive exercises.
+
+It provides real-time visibility into:
+
+- Initial access attempts
+- Lateral movement
+- Privilege escalation
+- Persistence mechanisms
+- Data exfiltration attempts
+
+This transforms the lab from just an infrastructure build into a monitored enterprise simulation.
+
+---
+
+## Modules Used in This Lab
+
+- SIEM (Log aggregation and correlation)
+- XDR (Extended Detection & Response)
+- File Integrity Monitoring (FIM)
+- Vulnerability Detection (default configuration)
+
+Allow installation to complete (Wazuh Server + Indexer) → save generated credentials (wazuh-passwords.txt) → access dashboard at https://localhost → accept certificate warning → log in → deploy Wazuh agents on endpoints (Windows MSI / Linux DEB) → register agents with manager IP and key → start agents (NET START WAZUH on Windows / systemctl enable --now wazuh-agent on Linux) → create agent groups (Windows / Linux) → assign agents → configure agent.conf to collect relevant logs (Windows Event Logs, Linux syslog/auth/audit).
+
+Integration With Lab Environment
+
+Once operational:
+
+All endpoints report security telemetry to the Security Server
+
+Attack simulations are logged and visualized in real time
+
+Alerts are generated during malicious activity
+
+File changes are monitored via FIM
+
+This setup enables controlled attack-and-defend exercises with full visibility into system behavior.
+
+Challenges & Lessons Learned
+
+Deploying Wazuh reinforced an important architectural principle:
+
+SIEM solutions are resource-intensive and should be isolated from operational servers.
+
+Log ingestion and indexing require sufficient memory and storage planning.
+Separating the Security Server prevented performance bottlenecks and kept the lab stable.
+
+Additionally, proper agent grouping and log tuning significantly reduced alert noise and improved detection quality.
+
+## Installation Steps (Technical Flow)
+
+Install Ubuntu 22.04 → configure networking → join Active Directory via `winbind` → log in as `sec-user` → escalate with `sudo` → install `curl` if needed → download Wazuh installer:
+
+```bash
+curl -sO https://packages.wazuh.com/4.9/wazuh-install.sh
+sudo bash ./wazuh-install.sh -a -i
 ![wazuh A1](https://github.com/user-attachments/assets/1a570d7c-13f9-41f7-9949-ce476bbdfaee)
+```
+---
+Allow installation to complete (Wazuh Server + Indexer) → save generated credentials (`wazuh-passwords.txt`) → access dashboard at `https://localhost` → accept certificate warning → log in → deploy Wazuh agents on endpoints (Windows MSI / Linux DEB) → register agents with manager IP and authorization key → start agents (`NET START WAZUH` on Windows / `systemctl enable --now wazuh-agent` on Linux) → create agent groups (Windows / Linux) → assign agents → configure `agent.conf` to collect relevant logs (Windows Event Logs, Linux syslog/auth/audit).
+
+---
+
+## Integration With Lab Environment
+
+Once operational:
+
+- All endpoints report security telemetry to the Security Server
+- Attack simulations are logged and visualized in real time
+- Alerts are generated during malicious activity
+- File changes are monitored via File Integrity Monitoring (FIM)
+
+This setup enables controlled attack-and-defend exercises with full visibility into system behavior.
+
+---
+
+## Challenges & Lessons Learned
+
+Deploying Wazuh reinforced an important architectural principle:
+
+> SIEM solutions are resource-intensive and should be isolated from operational servers.
+
+Log ingestion and indexing require sufficient memory and storage planning.  
+Separating the Security Server prevented performance bottlenecks and kept the lab stable.
+
+Additionally, proper agent grouping and log tuning significantly reduced alert noise and improved detection quality.
 
 
 
