@@ -211,7 +211,7 @@ No major blockers were encountered during setup, but as expected:
 
  <br>
 
-# 🔐 Security Server – Ubuntu 22.04 + Wazuh SIEM
+# 🛡️ Security Server – Ubuntu 22.04 + Wazuh SIEM
 
 ## Overview
 
