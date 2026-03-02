@@ -284,32 +284,7 @@ This transforms the lab from just an infrastructure build into a monitored enter
 - File Integrity Monitoring (FIM)
 - Vulnerability Detection (default configuration)
 
-Allow installation to complete (Wazuh Server + Indexer) → save generated credentials (wazuh-passwords.txt) → access dashboard at https://localhost → accept certificate warning → log in → deploy Wazuh agents on endpoints (Windows MSI / Linux DEB) → register agents with manager IP and key → start agents (NET START WAZUH on Windows / systemctl enable --now wazuh-agent on Linux) → create agent groups (Windows / Linux) → assign agents → configure agent.conf to collect relevant logs (Windows Event Logs, Linux syslog/auth/audit).
 
-Integration With Lab Environment
-
-Once operational:
-
-All endpoints report security telemetry to the Security Server
-
-Attack simulations are logged and visualized in real time
-
-Alerts are generated during malicious activity
-
-File changes are monitored via FIM
-
-This setup enables controlled attack-and-defend exercises with full visibility into system behavior.
-
-Challenges & Lessons Learned
-
-Deploying Wazuh reinforced an important architectural principle:
-
-SIEM solutions are resource-intensive and should be isolated from operational servers.
-
-Log ingestion and indexing require sufficient memory and storage planning.
-Separating the Security Server prevented performance bottlenecks and kept the lab stable.
-
-Additionally, proper agent grouping and log tuning significantly reduced alert noise and improved detection quality.
 
 ## Installation Steps (Technical Flow)
 
