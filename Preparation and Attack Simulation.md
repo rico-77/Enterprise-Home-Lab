@@ -63,6 +63,8 @@ This transforms the lab into a structured attack-and-detect simulation environme
 - Custom rule for excessive SSH authentication failures
 - Alert severity tuned for brute-force simulation
 
+![ssh](https://github.com/user-attachments/assets/25d0143a-f4c5-42d7-85ad-553047f9141e)
+
 ---
 
 ## 3️⃣ Configure SMTP Email Connection  
