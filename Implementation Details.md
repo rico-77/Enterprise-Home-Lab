@@ -4,12 +4,18 @@
 # 🖥️ **Virtual Machines**
 
 
+ <br>
+
+
 💻 Platform: VirtualBox
 
 
 • At the start of this project, I selected Oracle VirtualBox as the virtualization platform. I chose it based on previous experience from previous lab environments, which allowed me to efficiently configure, network, and manage multiple interconnected virtual machines. What else to say OVB is user friendly there are tons of available guides online and the UI is very simple to use. 
 
 ---
+
+ <br>
+
 
 # 🖧 **Servers**
 
@@ -129,7 +135,7 @@ This reinforced the critical dependency between Active Directory and DNS.
  <br>
 
 
-# 🏢 Corporate Server – Ubuntu JumpBox + MailHog
+## 🏢 Corporate Server – Ubuntu JumpBox + MailHog
 
 ## Overview
 
@@ -211,8 +217,9 @@ No major blockers were encountered during setup, but as expected:
 
 
  <br>
+ 
 
-# 🛡️ Security Server – Ubuntu 22.04 + Wazuh SIEM
+## 🛡️ Security Server – Ubuntu 22.04 + Wazuh SIEM
 
 ## Overview
 
@@ -332,6 +339,8 @@ Additionally, proper agent grouping and log tuning significantly reduced alert n
 
 
 
+
+
 # **🖥️ Workstations**
 
 
@@ -339,7 +348,7 @@ Additionally, proper agent grouping and log tuning significantly reduced alert n
 
 
 
-# 💻 Windows Workstation – Vulnerable Domain Client
+## 💻 Windows Workstation – Vulnerable Domain Client
 
 ## Overview
 
