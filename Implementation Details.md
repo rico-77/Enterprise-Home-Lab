@@ -450,7 +450,8 @@ This reinforced the importance of:
 - Monitoring and detection strategy
 - Segmentation and least-privilege design
 
-![win clin](https://github.com/user-attachments/assets/c694f80a-3585-4da0-a1b8-0b9b82c9f915)
+![win clin](https://github.com/user-attachments/assets/4515a8e7-6d2b-4964-9997-750f08bdbc54)
+
 
 
 
