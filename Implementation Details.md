@@ -24,7 +24,7 @@
 
 
 
-# 🏢 Windows Server 2025 – Active Directory
+## 🏢 Windows Server 2025 – Active Directory
 
 
 Windows Server 2025 running Active Directory is the core of this lab environment.  
