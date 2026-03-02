@@ -1,5 +1,7 @@
-#⚔️ Security Exercises
 
-##🔓 Configure Vulnerable Environment
 
-##🕵️ Cyber Attack Simulation
+#**⚔️ Security Exercises**
+
+##**🔓 Configure Vulnerable Environment**
+
+##**🕵️ Cyber Attack Simulation**
