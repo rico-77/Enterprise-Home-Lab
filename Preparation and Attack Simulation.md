@@ -169,6 +169,8 @@ This transforms the lab into a structured attack-and-detect simulation environme
 - Wazuh correlates file access + outbound connection
 - Alerts generated for unusual transfer behavior
 
+![sett](https://github.com/user-attachments/assets/61daa936-72b1-43b5-b1a9-6df07b0b2ff0)
+
 ---
 
 # Security Validation Outcome
