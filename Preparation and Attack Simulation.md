@@ -230,6 +230,199 @@ The lab is now prepared for full cyber attack simulation.
 
  <br>
  
-## 🕵️ Cyber Attack Simulation
 
 
+# 🕵️ Cyber Attack Simulation
+
+## Overview
+
+With the vulnerable environment configured and detection tooling in place, this phase executes a controlled cyber attack simulation.
+
+The objective is to validate:
+
+- Attack path feasibility
+- Detection visibility (host + network)
+- Alert accuracy
+- Correlation between telemetry sources
+- Defensive monitoring effectiveness
+
+All activity is performed inside an isolated NAT-based lab network.
+
+This simulation represents a structured attack chain, not random exploitation.
+
+---
+
+# Attack Scenario Flow
+
+The simulated attack follows a realistic progression:
+
+1. Initial Access (Phishing)
+2. Credential Abuse
+3. Lateral Movement
+4. Privilege Escalation
+5. Sensitive File Access
+6. Data Exfiltration
+
+Each phase is monitored by:
+
+- Wazuh (endpoint visibility)
+- Security Onion (network visibility)
+
+---
+
+# 1️⃣ Initial Access – Phishing Simulation
+
+**Method:**
+- Email sent via MailHog SMTP
+- Delivered from `project-x-corp-svr`
+- Received on `project-x-linux-client`
+
+**Objective:**
+- Simulate user interaction
+- Trigger credential exposure or execution attempt
+
+### Detection Validation
+- SMTP traffic captured by Security Onion
+- Mail service logs indexed in Wazuh
+- Email activity visible in SIEM dashboard
+
+---
+
+# 2️⃣ Credential Abuse
+
+**Method:**
+- Attempted authentication using weak credentials
+- SSH and WinRM tested where applicable
+
+**Objective:**
+- Validate brute-force feasibility
+- Confirm authentication logging
+
+### Detection Validation
+- Failed login attempts logged by Wazuh
+- SSH authentication anomalies flagged
+- Windows Event Logs indexed
+- Alert thresholds triggered
+
+---
+
+# 3️⃣ Lateral Movement
+
+**Method:**
+- Remote access via:
+  - SSH (Linux systems)
+  - WinRM (Windows client)
+  - RDP (Domain Controller)
+
+**Objective:**
+- Pivot between internal systems
+- Escalate access privileges
+
+### Detection Validation
+- Remote session events recorded
+- PowerShell logging captured (WinRM)
+- RDP login events indexed
+- Security Onion identifies remote session traffic
+
+---
+
+# 4️⃣ Privilege Escalation
+
+**Method:**
+- Abuse of over-permissioned accounts
+- Attempt access to high-value systems
+
+**Objective:**
+- Validate access control weaknesses
+- Confirm monitoring of elevated sessions
+
+### Detection Validation
+- Group membership activity logged
+- Privileged login events flagged
+- Alert severity increased for domain-level access
+
+---
+
+# 5️⃣ Sensitive File Access
+
+**Target:**
+- “Sensitive File” located on `project-x-dc`
+
+**Method:**
+- Accessed from compromised account
+- Modified or copied for staging
+
+**Objective:**
+- Simulate data targeting
+- Trigger File Integrity Monitoring (FIM)
+
+### Detection Validation
+- Wazuh FIM alert generated
+- File access and modification recorded
+- Correlation between user session + file activity visible in SIEM
+
+---
+
+# 6️⃣ Data Exfiltration
+
+**Method:**
+- Transfer of staged file to `project-x-attacker`
+- Simulated outbound data movement
+
+**Objective:**
+- Validate outbound monitoring
+- Detect abnormal traffic patterns
+
+### Detection Validation
+- Security Onion captures outbound session
+- Wazuh correlates file access with network activity
+- Alert generated for suspicious data transfer
+
+---
+
+# Correlation & Monitoring Outcome
+
+During the full attack chain:
+
+- Endpoint telemetry was collected
+- Network traffic was analyzed
+- Alerts were generated at each critical stage
+- File Integrity Monitoring detected sensitive file interaction
+- Authentication logs confirmed brute-force attempts
+- Remote access events were indexed and visualized
+
+The lab successfully demonstrated full visibility across:
+
+- Initial compromise
+- Internal movement
+- Privilege escalation
+- Data access
+- Exfiltration
+
+---
+
+# Defensive Value
+
+This simulation validates:
+
+- Detection rule effectiveness
+- Logging configuration accuracy
+- Alert severity tuning
+- Cross-platform telemetry integration
+- Network + host correlation capability
+
+It demonstrates the ability to:
+
+- Build a vulnerable environment intentionally
+- Execute a structured attack chain
+- Monitor activity in real time
+- Validate defensive coverage
+
+---
+
+# Key Takeaway
+
+Security is not just about building infrastructure —  
+it is about validating visibility under adversarial conditions.
+
+This lab demonstrates both offensive understanding and defensive monitoring integration within a controlled enterprise simulation.
