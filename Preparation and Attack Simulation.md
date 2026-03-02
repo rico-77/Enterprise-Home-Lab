@@ -106,6 +106,9 @@ This transforms the lab into a structured attack-and-detect simulation environme
 - Custom alert for suspicious WinRM sessions
 - Elevated severity for non-administrative account usage
 
+
+![win clin](https://github.com/user-attachments/assets/c3ac95d8-eb27-44f2-9586-383d8a22df84)
+
 ---
 
 ## 5️⃣ Enable RDP on `project-x-dc`
