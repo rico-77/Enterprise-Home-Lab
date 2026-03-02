@@ -562,3 +562,122 @@ This workstation completes the lab’s enterprise simulation by introducing a re
 ![linux clent](https://github.com/user-attachments/assets/abaefb7e-66d1-4644-823e-38bdc625a573)
 
 
+ <br>
+
+## 🛡️ Security Onion – Network Security Monitoring Platform
+
+## Overview
+
+Security Onion was deployed as a dedicated network security monitoring platform within the lab environment.
+
+Unlike Wazuh (which focuses on host-based monitoring), Security Onion provides:
+
+- Network traffic inspection
+- Intrusion detection (IDS)
+- Packet capture and analysis
+- Network-based threat visibility
+
+This adds a second layer of detection to the lab:  
+**Host-level monitoring (Wazuh) + Network-level monitoring (Security Onion).**
+
+---
+
+## Role in the Lab Architecture
+
+Security Onion functions as a network sensor and analysis platform.
+
+It:
+
+- Monitors internal lab network traffic
+- Detects suspicious activity at the packet level
+- Generates alerts for network-based attacks
+- Provides visibility into lateral movement
+
+This setup reflects real-world enterprise environments where both endpoint and network telemetry are required for effective detection.
+
+---
+
+## Deployment Approach
+
+Security Onion was deployed as a **Virtual Machine using the Security Onion ISO**.
+
+### High-Level Setup Flow
+
+Mount Security Onion ISO → install operating system → configure management interface → assign static IP → configure monitoring interface (promiscuous mode) → complete initial setup wizard → access web interface → verify sensor health → confirm packet capture and alert generation.
+
+The system was connected to the internal NAT network to monitor traffic between:
+
+- Domain Controller
+- Windows Workstation
+- Ubuntu Desktop Client
+- JumpBox
+- Security Server
+
+---
+
+## Monitoring Capabilities Enabled
+
+Security Onion provides:
+
+- IDS detection (Suricata)
+- Network Security Monitoring (NSM)
+- Packet capture (PCAP)
+- Log indexing and visualization
+- Alert management dashboard
+
+This enables detection of:
+
+- Port scans
+- Suspicious network connections
+- Lateral movement attempts
+- Command & Control patterns
+- Unusual internal communication
+
+---
+
+## Integration With Lab Environment
+
+Security Onion complements the Wazuh SIEM:
+
+- Wazuh monitors host activity
+- Security Onion monitors network traffic
+- Combined visibility improves detection accuracy
+
+During attack simulations:
+
+- Endpoint behavior is logged by Wazuh
+- Network traffic patterns are analyzed by Security Onion
+- Alerts can be correlated across systems
+
+This creates a realistic multi-layered detection environment.
+
+---
+
+## Why This Matters
+
+Relying only on endpoint logging is insufficient in enterprise security.
+
+Security Onion demonstrates:
+
+- Understanding of network-based detection
+- Practical IDS deployment
+- Traffic analysis skills
+- Layered security architecture
+
+It reinforces a core security principle:
+
+> Visibility must exist at both the host and network level.
+
+---
+
+## Lessons Learned
+
+Deploying Security Onion highlighted:
+
+- The importance of proper interface configuration (management vs monitoring)
+- The need for adequate storage for packet capture
+- How noisy raw network alerts can be without tuning
+- The value of correlating network alerts with SIEM data
+
+This component elevates the lab from endpoint monitoring to full network-aware security simulation.
+
