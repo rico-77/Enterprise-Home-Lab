@@ -450,3 +450,109 @@ This reinforced the importance of:
 - Monitoring and detection strategy
 - Segmentation and least-privilege design
 
+
+ <br>
+
+
+
+## 🐧 Ubuntu Desktop Workstation – Domain-Integrated Linux Client
+
+## Overview
+
+This Ubuntu Desktop workstation represents a Linux-based corporate endpoint within the internal lab network.
+
+Unlike the Domain Controller, JumpBox, and Security Server, this machine is not part of the core infrastructure. It functions as a user workstation and is intentionally configured with controlled vulnerabilities to simulate realistic attack scenarios.
+
+This system allows cross-platform testing within an Active Directory environment.
+
+---
+
+## Role in the Lab Architecture
+
+The Ubuntu Desktop workstation:
+
+- Connects to the internal NAT network
+- Integrates with Active Directory
+- Authenticates using domain credentials
+- Communicates with internal servers (DC, JumpBox, Security Server)
+- Reports telemetry to the Wazuh SIEM
+
+It represents a non-Windows employee endpoint inside a domain-managed corporate network.
+
+---
+
+## Deployment Approach
+
+The workstation was deployed as a **Virtual Machine using an Ubuntu Desktop ISO**.
+
+### High-Level Setup Flow
+
+Mount Ubuntu Desktop ISO → install operating system → configure networking → assign internal IP → configure DNS to Domain Controller (`10.0.0.5`) → install required AD integration packages (`realmd`, `sssd`, `winbind`, etc.) → join Active Directory domain → reboot → verify domain authentication → install Wazuh agent → validate connectivity.
+
+This process ensures domain-level identity control while maintaining Linux-specific behavior.
+
+---
+
+## Intentional Vulnerable Configuration
+
+To support offensive security simulations, the workstation includes controlled weaknesses:
+
+- Weak credentials in early lab stages
+- Limited hardening configuration
+- Exposed internal services (where required)
+- Standard privilege misconfigurations
+- SSH enabled for internal access testing
+
+These vulnerabilities are intentional and exist strictly within the isolated lab environment.
+
+---
+
+## Security Monitoring Integration
+
+The Ubuntu Desktop client is monitored through:
+
+- Wazuh agent installation
+- Syslog and auth log collection
+- File Integrity Monitoring (FIM)
+- Security event forwarding to the Wazuh Security Server
+
+This enables detection of:
+
+- Unauthorized SSH access
+- Privilege escalation attempts
+- Suspicious file modifications
+- Lateral movement simulations
+
+All activity is centralized and visualized through the SIEM dashboard.
+
+---
+
+## Why This Matters
+
+Many enterprise environments operate hybrid infrastructures combining Windows and Linux systems.
+
+By integrating a Linux desktop into an Active Directory-controlled environment, this lab demonstrates:
+
+- Cross-platform identity management
+- Linux endpoint security monitoring
+- Multi-OS attack surface awareness
+- Enterprise-style security visibility
+
+It reinforces an important security principle:
+
+> Attackers target the weakest endpoint — regardless of operating system.
+
+---
+
+## Lessons Learned
+
+Deploying and integrating a Linux desktop into an AD environment highlighted:
+
+- The complexity of cross-platform authentication
+- The importance of DNS accuracy for domain integration
+- How Linux endpoints can be overlooked in enterprise monitoring strategies
+- The value of centralized logging in mixed-OS environments
+
+This workstation completes the lab’s enterprise simulation by introducing a realistic hybrid endpoint scenario.
+
+
