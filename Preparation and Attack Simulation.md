@@ -126,6 +126,8 @@ This transforms the lab into a structured attack-and-detect simulation environme
 - RDP login events collected via Wazuh
 - Security Onion monitors RDP traffic signatures
 
+![rdp](https://github.com/user-attachments/assets/1d8f46c7-7998-4285-8396-22af0180a783)
+
 ---
 
 ## 6️⃣ Setup “Sensitive File” on `project-x-dc`
