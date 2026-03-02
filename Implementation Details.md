@@ -349,6 +349,7 @@ Separating the Security Server prevented performance bottlenecks and kept the la
 
 Additionally, proper agent grouping and log tuning significantly reduced alert noise and improved detection quality.
 
+![wazuh A1](https://github.com/user-attachments/assets/1d9e9320-b5e1-4e95-91d4-4044b858b38c)
 
 
 
