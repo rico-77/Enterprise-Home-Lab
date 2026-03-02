@@ -193,3 +193,9 @@ This phase demonstrates not only offensive understanding,
 but defensive validation and alert engineering.
 
 The lab is now prepared for full cyber attack simulation.
+
+---
+
+## 🕵️ Cyber Attack Simulation
+
+
