@@ -149,6 +149,8 @@ This transforms the lab into a structured attack-and-detect simulation environme
 🚨 **Detection Alert Created**
 - High-severity alert for file access or modification
 - Indexed for correlation with user session activity
+- 
+![ssensitiv](https://github.com/user-attachments/assets/74516f60-07db-4231-94a2-41d5bc3a3b09)
 
 ---
 
