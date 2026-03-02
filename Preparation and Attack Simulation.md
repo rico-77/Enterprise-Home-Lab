@@ -4,6 +4,8 @@
 
 ## 🕵️ Cyber Attack Simulation
 
+ <br>
+ 
 ---
 
 ## 🔓 Configure Vulnerable Environment
@@ -24,6 +26,8 @@ This transforms the lab into a structured attack-and-detect simulation environme
 
 ---
 
+ <br>
+ 
 # Service Exposure & Detection Integration
 
 ## 1️⃣ Open SSH on `project-x-corp-svr`
@@ -45,6 +49,8 @@ This transforms the lab into a structured attack-and-detect simulation environme
 
 ---
 
+ <br>
+ 
 ## 2️⃣ Open SSH on `project-x-linux-client`
 
 **Action:**
@@ -67,6 +73,8 @@ This transforms the lab into a structured attack-and-detect simulation environme
 
 ---
 
+ <br>
+ 
 ## 3️⃣ Configure SMTP Email Connection  
 `project-x-corp-svr` → `project-x-linux-client`
 
@@ -86,6 +94,8 @@ This transforms the lab into a structured attack-and-detect simulation environme
 
 ---
 
+ <br>
+ 
 ## 4️⃣ Enable WinRM on `project-x-win-client`
 
 **Action:**
@@ -112,6 +122,8 @@ This transforms the lab into a structured attack-and-detect simulation environme
 
 ---
 
+ <br>
+ 
 ## 5️⃣ Enable RDP on `project-x-dc`
 
 **Action:**
@@ -132,6 +144,8 @@ This transforms the lab into a structured attack-and-detect simulation environme
 
 ---
 
+ <br>
+ 
 ## 6️⃣ Setup “Sensitive File” on `project-x-dc`
 
 **Action:**
@@ -154,6 +168,8 @@ This transforms the lab into a structured attack-and-detect simulation environme
 
 ---
 
+ <br>
+ 
 ## 7️⃣ Exfiltration to `project-x-attacker`
 
 **Action:**
@@ -173,6 +189,8 @@ This transforms the lab into a structured attack-and-detect simulation environme
 
 ---
 
+ <br>
+ 
 # Security Validation Outcome
 
 After completing this phase:
@@ -210,6 +228,8 @@ The lab is now prepared for full cyber attack simulation.
 
 ---
 
+ <br>
+ 
 ## 🕵️ Cyber Attack Simulation
 
 
