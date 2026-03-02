@@ -82,6 +82,7 @@ This transforms the lab into a structured attack-and-detect simulation environme
 - Wazuh monitors mail service logs
 - Security Onion inspects SMTP traffic
 - Email transmission events indexed for correlation
+![smtp](https://github.com/user-attachments/assets/01e4f692-493a-41c8-9c25-51eb23ea7d88)
 
 ---
 
