@@ -63,7 +63,7 @@ This transforms the lab into a structured attack-and-detect simulation environme
 - Custom rule for excessive SSH authentication failures
 - Alert severity tuned for brute-force simulation
 
-![ssh](https://github.com/user-attachments/assets/25d0143a-f4c5-42d7-85ad-553047f9141e)
+![ssh](https://github.com/user-attachments/assets/d7e5ac80-9ffb-4c30-9c55-4d4e3ed84d54)
 
 ---
 
