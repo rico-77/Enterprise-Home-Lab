@@ -556,4 +556,5 @@ Deploying and integrating a Linux desktop into an AD environment highlighted:
 
 This workstation completes the lab’s enterprise simulation by introducing a realistic hybrid endpoint scenario.
 
+<img width="693" height="272" alt="image" src="https://github.com/user-attachments/assets/15bfda16-595b-4a7a-8fbb-5bff8ff15466" />
 
