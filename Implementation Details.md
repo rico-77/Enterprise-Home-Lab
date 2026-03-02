@@ -327,4 +327,116 @@ Additionally, proper agent grouping and log tuning significantly reduced alert n
 ![wazuh A1](https://github.com/user-attachments/assets/1d9e9320-b5e1-4e95-91d4-4044b858b38c)
 
 
+ <br>
+
+
+
+**🖥️ Workstations**
+
+
+ <br>
+
+
+
+# 💻 Windows Workstation – Vulnerable Domain Client
+
+## Overview
+
+This Windows workstation represents a standard corporate endpoint joined to the internal Active Directory domain.
+
+Unlike the Domain Controller, JumpBox, and Security Server, this system is **not infrastructure** — it is an endpoint.  
+
+Its role in the lab is intentional:
+
+> It is configured with vulnerable settings to simulate realistic attack scenarios.
+
+This allows the lab to transition from infrastructure deployment into offensive and defensive security testing.
+
+---
+
+## Role in the Lab Architecture
+
+The Windows workstation:
+
+- Joins the domain: `corp.project-x-dc.com`
+- Authenticates against Active Directory
+- Communicates with the JumpBox
+- Reports telemetry to the Wazuh Security Server
+- Acts as an initial attack target
+
+This reflects a real enterprise setup where user machines are often the primary entry point for attackers.
+
+---
+
+## Deployment Approach
+
+The workstation was deployed as a **Virtual Machine using a Windows ISO**, similar to the Domain Controller installation process but configured as a client rather than a server.
+
+### High-Level Setup Flow
+
+Mount Windows ISO → install Windows (Desktop edition) → configure networking → assign internal IP → set DNS to Domain Controller (`10.0.0.5`) → join Active Directory domain → reboot → log in as domain user → verify connectivity to internal services.
+
+---
+
+## Intentional Vulnerable Configuration
+
+To simulate realistic attack vectors, the workstation includes controlled weaknesses:
+
+- Weak user credentials (early-stage lab configuration)
+- Reduced security hardening
+- Services exposed internally where required
+- Standard user privilege misconfigurations
+- Phishing simulation capability (via MailHog infrastructure)
+
+These vulnerabilities are deliberate and exist solely for controlled lab testing.
+
+---
+
+## Security Monitoring Integration
+
+The Windows workstation is monitored by:
+
+- Wazuh agent installed and registered to the Security Server
+- Log forwarding (Windows Event Logs)
+- File Integrity Monitoring (FIM)
+
+This enables real-time visibility during:
+
+- Initial access attempts
+- Privilege escalation
+- Credential abuse
+- Lateral movement simulations
+
+Attacks are not only executed — they are observed and analyzed.
+
+---
+
+## Why This Matters
+
+In real-world environments, endpoints are typically the weakest link.
+
+By intentionally configuring a vulnerable domain-joined workstation, this lab demonstrates:
+
+- How attackers gain initial access
+- How domain environments amplify risk
+- The importance of endpoint monitoring
+- The value of centralized detection through SIEM
+
+This workstation bridges the gap between infrastructure build-out and practical security testing.
+
+---
+
+## Lessons Learned
+
+Building this workstation highlighted an important security principle:
+
+> Even a properly configured Domain Controller cannot compensate for weak endpoints.
+
+Small misconfigurations at the user level can expose the entire domain to risk.
+
+This reinforced the importance of:
+- Endpoint hardening
+- Credential management
+- Monitoring and detection strategy
+- Segmentation and least-privilege design
 
