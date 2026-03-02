@@ -449,6 +449,7 @@ This reinforced the importance of:
 - Credential management
 - Monitoring and detection strategy
 - Segmentation and least-privilege design
+![win clin](https://github.com/user-attachments/assets/ab676763-44a1-4d8b-af0b-5c21f2ec3cd1)
 
 
  <br>
