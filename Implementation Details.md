@@ -681,3 +681,10 @@ Deploying Security Onion highlighted:
 
 This component elevates the lab from endpoint monitoring to full network-aware security simulation.
 
+![Onion linux](https://github.com/user-attachments/assets/2cd05e10-a337-434c-a56d-5453baf66c69)
+
+
+
+ <br>
+
+
