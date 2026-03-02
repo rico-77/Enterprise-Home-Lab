@@ -1,7 +1,8 @@
 ![BBBBB](https://github.com/user-attachments/assets/59c1709a-caae-48e6-b2a4-1097a4cbe5a3)
 
 
-🖥️ **Virtual Machines**
+# 🖥️ **Virtual Machines**
+
 
 💻 Platform: VirtualBox
 
@@ -331,7 +332,7 @@ Additionally, proper agent grouping and log tuning significantly reduced alert n
 
 
 
-**🖥️ Workstations**
+# **🖥️ Workstations**
 
 
  <br>
