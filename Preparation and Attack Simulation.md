@@ -257,7 +257,7 @@ This simulation follows the documented attack path:
 3️⃣ Lateral Movement  
 4️⃣ Privilege Escalation  
 5️⃣ Data Exfiltration  
-5️⃣ Persistence  
+6️⃣ Persistence  
 ❌ Defense Evasion  
 
 ---
@@ -363,7 +363,7 @@ Access and transfer sensitive data outside the compromised system.
 
 ---
 
-# 5️⃣ Persistence
+# 6️⃣ Persistence
 
 ## Objective
 Maintain access after initial compromise.
