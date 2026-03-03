@@ -256,131 +256,175 @@ This simulation represents a structured attack chain, not random exploitation.
 
 The simulated attack follows a realistic progression:
 
-1. Initial Access (Phishing)
-2. Credential Abuse
-3. Lateral Movement
-4. Privilege Escalation
-5. Sensitive File Access
-6. Data Exfiltration
+# 🕵️ Cyber Attack Simulation
 
-Each phase is monitored by:
+## Overview
 
-- Wazuh (endpoint visibility)
-- Security Onion (network visibility)
+With the vulnerable environment configured, this phase executes a structured cyber attack simulation following a defined adversary progression model.
 
----
+The goal is to validate:
 
-# 1️⃣ Initial Access – Phishing Simulation
+- Attack path feasibility
+- Detection coverage (host + network)
+- Alert engineering accuracy
+- Correlation across telemetry sources
+- Blue-team visibility during offensive activity
 
-**Method:**
-- Email sent via MailHog SMTP
-- Delivered from `project-x-corp-svr`
-- Received on `project-x-linux-client`
+All activity is performed inside an isolated lab environment.
 
-**Objective:**
-- Simulate user interaction
-- Trigger credential exposure or execution attempt
+This simulation follows the documented attack path:
 
-### Detection Validation
-- SMTP traffic captured by Security Onion
-- Mail service logs indexed in Wazuh
-- Email activity visible in SIEM dashboard
+1️⃣ Reconnaissance  
+2️⃣ Initial Access  
+3️⃣ Lateral Movement  
+4️⃣ Privilege Escalation  
+5️⃣ Data Exfiltration  
+5️⃣ Persistence  
+❌ Defense Evasion  
 
 ---
 
-# 2️⃣ Credential Abuse
+# 1️⃣ Reconnaissance
 
-**Method:**
-- Attempted authentication using weak credentials
-- SSH and WinRM tested where applicable
+## Objective
+Identify reachable services, exposed ports, and potential entry points inside the internal network.
 
-**Objective:**
-- Validate brute-force feasibility
-- Confirm authentication logging
+## Activity
+- Internal host discovery
+- Port scanning of:
+  - `project-x-linux-client`
+  - `project-x-win-client`
+  - `project-x-dc`
+  - `project-x-corp-svr`
+- Service enumeration (SSH, SMTP, WinRM, RDP)
 
-### Detection Validation
+## Detection Integration
+
+- Security Onion detects network scanning behavior
+- Suspicious port sweep activity logged
+- Traffic anomalies indexed for review
+- Wazuh correlates unusual connection attempts
+
+---
+
+# 2️⃣ Initial Access
+
+## Objective
+Gain foothold through weak authentication or phishing simulation.
+
+## Activity
+- Phishing email delivered via MailHog (SMTP 1025)
+- Authentication attempts using weak credentials
+- SSH access attempts on Linux systems
+- WinRM authentication testing on Windows client
+
+## Detection Integration
+
 - Failed login attempts logged by Wazuh
-- SSH authentication anomalies flagged
-- Windows Event Logs indexed
-- Alert thresholds triggered
+- Windows Event Logs forwarded and indexed
+- SMTP traffic visible in Security Onion
+- Custom alert for excessive authentication failures triggered
 
 ---
 
 # 3️⃣ Lateral Movement
 
-**Method:**
-- Remote access via:
-  - SSH (Linux systems)
-  - WinRM (Windows client)
-  - RDP (Domain Controller)
+## Objective
+Pivot from compromised system to additional internal hosts.
 
-**Objective:**
-- Pivot between internal systems
-- Escalate access privileges
+## Activity
+- SSH pivot from Linux client
+- WinRM session to Windows workstation
+- RDP access to `project-x-dc`
 
-### Detection Validation
+## Detection Integration
+
 - Remote session events recorded
-- PowerShell logging captured (WinRM)
+- PowerShell activity logged (WinRM)
 - RDP login events indexed
-- Security Onion identifies remote session traffic
+- Network session metadata captured by Security Onion
+- Alert triggered for suspicious remote access patterns
 
 ---
 
 # 4️⃣ Privilege Escalation
 
-**Method:**
+## Objective
+Escalate privileges to obtain elevated or domain-level access.
+
+## Activity
 - Abuse of over-permissioned accounts
-- Attempt access to high-value systems
+- Access to higher-privileged groups
+- Validation of domain-level authentication
 
-**Objective:**
-- Validate access control weaknesses
-- Confirm monitoring of elevated sessions
+## Detection Integration
 
-### Detection Validation
-- Group membership activity logged
-- Privileged login events flagged
-- Alert severity increased for domain-level access
-
----
-
-# 5️⃣ Sensitive File Access
-
-**Target:**
-- “Sensitive File” located on `project-x-dc`
-
-**Method:**
-- Accessed from compromised account
-- Modified or copied for staging
-
-**Objective:**
-- Simulate data targeting
-- Trigger File Integrity Monitoring (FIM)
-
-### Detection Validation
-- Wazuh FIM alert generated
-- File access and modification recorded
-- Correlation between user session + file activity visible in SIEM
+- Privileged logon events logged
+- Group membership activity indexed
+- Elevated account activity flagged
+- Severity-based alerting for administrative sessions
 
 ---
 
-# 6️⃣ Data Exfiltration
+# 5️⃣ Data Exfiltration
 
-**Method:**
-- Transfer of staged file to `project-x-attacker`
-- Simulated outbound data movement
+## Objective
+Access and transfer sensitive data outside the compromised system.
 
-**Objective:**
-- Validate outbound monitoring
-- Detect abnormal traffic patterns
+## Activity
+- Access “Sensitive File” on `project-x-dc`
+- Stage file for transfer
+- Simulated outbound transfer to `project-x-attacker`
 
-### Detection Validation
-- Security Onion captures outbound session
-- Wazuh correlates file access with network activity
-- Alert generated for suspicious data transfer
+## Detection Integration
+
+- File Integrity Monitoring (FIM) alert generated
+- File access and modification logged
+- Outbound traffic captured by Security Onion
+- Correlation between file access + network transfer
 
 ---
 
-# Correlation & Monitoring Outcome
+# 5️⃣ Persistence
+
+## Objective
+Maintain access after initial compromise.
+
+## Activity
+- Establish recurring access mechanism
+- Maintain valid credentials or remote access capability
+- Validate continued remote connectivity
+
+## Detection Integration
+
+- New service or scheduled task monitoring
+- Authentication pattern monitoring
+- Alert for abnormal recurring logins
+- Persistence artifacts logged in Wazuh
+
+---
+
+# ❌ Defense Evasion
+
+## Objective
+Attempt to reduce visibility or bypass detection controls.
+
+## Activity
+- Attempt log clearing (where applicable in lab)
+- Modification of monitoring-related configurations
+- Testing detection blind spots
+
+## Detection Integration
+
+- Log tampering attempts flagged
+- Service modification alerts triggered
+- Integrity monitoring detects configuration changes
+- Correlation engine highlights suspicious suppression behavior
+
+---
+
+
+# Simulation Outcome
 
 During the full attack chain:
 
