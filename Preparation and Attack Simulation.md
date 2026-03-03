@@ -259,6 +259,8 @@ This simulation follows the documented attack path:
 6️⃣ Persistence  
 ❌ Defense Evasion  
 
+![6](https://github.com/user-attachments/assets/4064d544-cb38-46f2-bdb1-3830e354f451)
+
 ---
 
 # 1️⃣ Reconnaissance
