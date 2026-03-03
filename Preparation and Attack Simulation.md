@@ -248,29 +248,7 @@ The objective is to validate:
 
 All activity is performed inside an isolated NAT-based lab network.
 
-This simulation represents a structured attack chain, not random exploitation.
-
----
-
-# Attack Scenario Flow
-
-The simulated attack follows a realistic progression:
-
-# 🕵️ Cyber Attack Simulation
-
-## Overview
-
-With the vulnerable environment configured, this phase executes a structured cyber attack simulation following a defined adversary progression model.
-
-The goal is to validate:
-
-- Attack path feasibility
-- Detection coverage (host + network)
-- Alert engineering accuracy
-- Correlation across telemetry sources
-- Blue-team visibility during offensive activity
-
-All activity is performed inside an isolated lab environment.
+This simulation represents a structured attack chain, not random exploitation
 
 This simulation follows the documented attack path:
 
