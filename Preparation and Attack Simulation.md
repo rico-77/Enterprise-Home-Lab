@@ -248,7 +248,6 @@ The objective is to validate:
 
 All activity is performed inside an isolated NAT-based lab network.
 
-This simulation represents a structured attack chain, not random exploitation
 
 This simulation follows the documented attack path:
 
