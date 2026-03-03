@@ -261,7 +261,8 @@ This simulation follows the documented attack path:
 
 ![path](https://github.com/user-attachments/assets/d4d41952-1767-43ca-8988-86da644534bc)
 
-![6](https://github.com/user-attachments/assets/4064d544-cb38-46f2-bdb1-3830e354f451)
+![6](https://github.com/user-attachments/assets/3616cbe7-e1f1-4ae8-bd5b-75033558977a)
+
 
 ---
 
